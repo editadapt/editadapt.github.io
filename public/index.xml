@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Services pour l&#39;édition inclusive et adaptée</title>
+    <link>https://editadapt.net/</link>
+    <description>Contenu récent sur Services pour l&#39;édition inclusive et adaptée</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <copyright>GPL</copyright>
+    <atom:link href="https://editadapt.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>événement OPF : Outils pour l\&#39;édition adaptée et Inclusive</title>
+      <link>https://editadapt.net/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://editadapt.net/</guid>
+      <description>&lt;p&gt;éditadapt participe au &lt;a href=&#34;https://openpublishingfest.org/&#34;&gt;Open Publishing
+Fest&lt;/a&gt;, un événement public et
+décentralisé pour permettre la rencontre des communautées travaillant
+sur les publications en format ouvert. Nous présentons quelques outils
+intégrables à vos flux de travail pour assurer l&#39;accés le plus large
+possible aux contenus publiés.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;L&#39;édition numérique porte l&#39;opportunité technique d&#39;améliorer
+l&#39;accès aux connaissances pour les personnes empêchés de lire. Un
+voyage au coeur des échanges culturels entre les organisations
+spécialisées et les éditeurs pour découvrir quelques uns des outils,
+dispositifs et bonnes pratiques qui bénéficieront à tous les lecteurs.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;lien-pour-la-conférence&#34;&gt;Lien pour la conférence&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://8x8.vc/editadapt/opffr&#34;&gt;https://8x8.vc/editadapt/opffr&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ressources-&#34;&gt;Ressources :&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.accessiblebooksconsortium.org/portal/fr/index.html&#34;&gt;Site web du Consortium pour des Livres Accessibles
+(ABC)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://daisy.org&#34;&gt;Site web du Consortium Daisy (en anglais)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://daisy-france.org&#34;&gt;Site web du groupe de travail DAISY
+France&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kb.daisy.org&#34;&gt;Base de connaissance&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

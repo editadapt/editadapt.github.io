@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Services for inclusive and specialized publishing</title>
+    <link>https://editadapt.net/en/</link>
+    <description>Recent content on Services for inclusive and specialized publishing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>GPL</copyright>
+    <atom:link href="https://editadapt.net/en/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>OPF event: tools for accessible and inclusive publishing worflows</title>
+      <link>https://editadapt.net/en/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://editadapt.net/en/</guid>
+      <description>
+&lt;p&gt;
+During &lt;a href=&#34;https://openpublishingfest.org/&#34;&gt;Open Publishing Fest&lt;/a&gt;, a decentralized public event that brings together communities supporting open source software, open content, and open publishing models, editadapat presents some tools to ensure our worklows delivers contents accessibles to a larger readers needs. 
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;em&gt;Digital publication is a technical oportunity to improve access to knowledge for people with print disabilities. A journey into cultural exchange beetwen accessibility specialized organizations and publishers that leads us into some tools and practices for all readers benefit.&lt;/em&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-1&#34;&gt;
+Live conference link 
+&lt;/h3&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://8x8.vc/editadapt/opfen&#34;&gt;https://8x8.vc/editadapt/opfen&lt;/a&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-2&#34;&gt;
+Ressources : 
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.accessiblebooksconsortium.org/portal/en/index.html&#34;&gt;Accessible Book Consortium website (ABC)&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://daisy.org&#34;&gt;Consortium Daisy website&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://kb.daisy.org&#34;&gt;Knowledge base&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
