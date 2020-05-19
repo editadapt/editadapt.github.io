@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags sur Services pour l&#39;édition inclusive et adaptée</title>
+    <link>https://editadapt.net/tags/</link>
+    <description>Contenu récent dans Tags sur Services pour l&#39;édition inclusive et adaptée</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <copyright>GPL</copyright>
+    <atom:link href="https://editadapt.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+  </channel>
+</rss>
