@@ -1,0 +1,20 @@
+{{ define "main" }}
+<main>
+<section>
+    <!-- this is the main book layout -->
+    {{.Content}}
+    <nav class="toc">
+        {{ range .Pages }}
+        <h2>{{.Title}}</h2>
+        {{ if .Params.cover }}
+        <p>{{ .Params.cover }}</p>
+        {{ end }}
+        {{ if .Params.intro }}
+        <p>{{ .Params.Intro | markdownify }}</p>
+        {{ end }}
+        <a href="{{.Permalink | relURL }}">Check content</a>
+        {{ end }}
+    </nav>
+</section>
+</main>
+{{end}}

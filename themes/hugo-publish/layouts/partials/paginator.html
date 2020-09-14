@@ -1,0 +1,14 @@
+<div class="paginator {{ if and .NextInSection .PrevInSection }} both {{ end }}">
+    {{ with .NextInSection }}
+    <a class="previous" href="{{.Permalink}}">{{.Title}}</a>
+    {{ end }}
+    {{ if .NextInSection }}
+    {{ with .PrevInSection }}
+    <a class="next" href="{{.Permalink}}">{{.Title}}</a>
+    {{ end }}
+    {{ else }}
+    {{ with .PrevInSection }}
+    <a class="next alone" href="{{.Permalink}}">{{.Title}}</a>
+    {{ end }}
+    {{ end }}
+  </div>

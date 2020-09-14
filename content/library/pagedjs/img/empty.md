@@ -1,0 +1,1 @@
+<!-- add images in this folder, to be able to call them using url: img/name-of-the-image.jpg -->

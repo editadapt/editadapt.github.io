@@ -1,0 +1,49 @@
+.toc {
+  counter-reset: chapter-title;
+
+  h3 {
+    counter-increment: chapter-title;
+    position: relative;
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
+    margin-top: 3em;
+
+    &::after {
+      /* content: "........................................................................................................................................................................................................................................................................................................."; */
+      color: var(--color-grey);
+      position: absolute;
+      bottom: 0;
+      opacity: 0.8;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      width: unset;
+
+      &.active::before {
+        content: " → ";
+        position: absolute;
+        left: -3ch;
+        color: var(--color-primary);
+      }
+    }
+
+    span {
+      background: var(--color-background);
+      position: relative;
+      z-index: 1;
+      padding-right: 1ch;
+    }
+
+    span::before {
+      content: counter(chapter-title) " ";
+      margin-right: 0.7ch;
+      font-family: var(--font-sans);
+      font-style: normal;
+      font-size: 0.8em;
+      color: var(--color-grey);
+    }
+  }
+}

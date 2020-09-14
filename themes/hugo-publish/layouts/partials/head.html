@@ -1,0 +1,12 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <!-- adding link to css through partials from different themes -->
+    {{ $reset := resources.Get "./css/reset.css" | resources.PostCSS (dict "config" "./assets/css/postcss.config.js" "noMap" true) | minify  | resources.Fingerprint "md5" }}
+    <link rel="stylesheet" href="{{ $reset.Permalink }}" integrity="{{ $reset.Data.Integrity }}">
+    {{ partial "pagedjs-header.html" . }}
+    {{ partial "layout.html" . }}
+    {{ partial "theme.html" . }}
+</head>

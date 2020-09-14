@@ -1,0 +1,3 @@
+{
+    "data" : {{ block "response" .}} {{ .Render "item" }} {{ end }}
+}
