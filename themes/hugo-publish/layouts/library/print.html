@@ -1,0 +1,20 @@
+{{ define "main" }}
+<main>
+<section>
+    <h2>Table of Contents</h2>
+    <nav class="toc">
+        {{ range .Parent.Pages }}
+        <h2>{{.Title}}</h2>
+        {{/* $link := printf "href=\"%s" .Permalink */}}
+        {{/*replace .Page.TableOfContents `nav id="TableOfContents"` `div class="toc"` | replaceRE `href="` $link | safeHTML */}}
+        {{ .TableOfContents }}
+        {{ end }}
+    </nav>
+</section>
+        {{ range .Parent.Pages }}
+<section>
+    {{.Content}}
+</section>
+{{ end }}
+</main>
+{{end}}

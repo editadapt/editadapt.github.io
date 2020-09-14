@@ -1,0 +1,29 @@
+/* This file list all the used variable in the Hugo Publish framework. It allows you to use Hugo and CSS cascade to overwrite stuff and meet you needs without having to rewrite all css.
+
+A couple of rules
+- number of class as little as possible, and always on parent to use all the powers of the cascade (give more power to parents)  
+
+
+
+*/
+
+
+:root {
+    --font-serif: "ET Book";
+    --font-sans: sans-serif;
+    --font-mono: monospace;
+    --color-background: white;
+    --color-body: black;
+    --color-primary: #187dde;
+    --color-accent: orange;
+
+    --color-interface: var(--color-body);
+    --color-grey: #888;
+    --font-interface: var(--font-serif);
+}
+
+.invert {
+    --color-background: var(--color-body);
+    --color-body: white;
+}
+

@@ -1,0 +1,47 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "MY OWN SMALL PUBLISHING HOUSE"
+# theme=["hugo-publish-tufte","hugo-publish-single-column","hugo-publish"]
+theme=["pagedjs", "hugo-publish-tufte","hugo-publish-single-column","hugo-publish"]
+
+[outputs]
+  home = ["html"]
+  section = ["json", "html"] 
+  
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    pre = "→"
+    url = "/about/"
+    weight = -110
+
+  [[menu.main]]
+    name = "contact"
+    post = "↑"
+    pre = "→"
+    url = "/contact/"
+    weight = -100
+    
+  [[menu.main]]  
+    name = "library"
+    post = "↑"
+    pre = "→"
+    url = "/library/"
+    weight = -100
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = ""
+    tabWidth = 4
+  [markup.tableOfContents]
+    endLevel = 2
+    ordered = false
+    startLevel = 2

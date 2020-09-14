@@ -1,0 +1,14 @@
+<html>
+<body>
+<article>
+  <h1>{{ .Site.Title }}</h1>
+{{ range (where .Site.Pages "Section" "eq" .Site.Params.BookSection ) }}
+<section>
+    <h2>{{ .Title }}</h2>
+{{ .Content | markdownify }}
+</section>
+{{ end }}
+</article>
+
+</body>
+</html>

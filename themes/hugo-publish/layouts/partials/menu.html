@@ -1,0 +1,16 @@
+    <label for="menuList">Menu</label>
+    <input id="menuList" name="menuList" class="menu-check" type="checkbox" ></input>
+    <nav>
+        <ul>
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            <li>
+                <a {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} class="active" {{end}} href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+        </ul>
+        {{ if or (eq  .Params.layout "booksingle") (eq  .Params.layout "print") }}
+        {{ partial "print-button.html" }}
+        {{ end }}
+    </nav>
+ 

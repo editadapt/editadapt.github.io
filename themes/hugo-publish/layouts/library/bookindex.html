@@ -1,0 +1,29 @@
+{{define "bodyClass" }}book-index{{end}}
+
+{{define "sidebar"}}
+<aside class="sidebar">
+    <label for="menuTOC">Table of Contents</label>
+    <input id="menuTOC" name="menuTOC" class="menu-check" type="checkbox"></input>
+    <nav class="toc">
+        {{ range .RegularPages.ByParam "order" }}
+        <h3><a href="{{.Permalink | relURL }}"><span>{{.Title}}</span></a></h3>
+        {{ $link := printf "href=\"%s" .Permalink }}
+        {{replace .Page.TableOfContents `nav id="TableOfContents"` `ul class="sub-toc"` | replaceRE `href="` $link | replaceRE `</nav>` `</ul>` | safeHTML }}
+        </div>
+        </li>
+        {{ end }}
+    </nav>
+</aside>
+{{end}}
+{{ define "main" }}
+<main>
+    <section class="content">
+        {{ .Content }}
+    </section>
+</main>
+{{end}}
+{{ define "footer" }}
+<footer>
+    <!-- {{ partial "footer.html" . }} -->
+</footer>
+{{ end }}

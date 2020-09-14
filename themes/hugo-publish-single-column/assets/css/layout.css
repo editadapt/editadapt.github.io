@@ -1,0 +1,289 @@
+/* ↓----------------- layout -------------↓ */
+
+:root {
+  --navbar-height: 5vh;
+  --footer-height: 5vh;
+  --grid-gap: 5ch;
+  --font-sans: sans-serif;
+  --font-interface: var(--font-sans);
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(10vw, 1fr) 1fr 1fr 1fr;
+  grid-template-rows: var(--navbar-height) 90vh var(--footer-height);
+  grid-template-areas:
+    "logo menu menu menu"
+    "sidebar main main main"
+    "footer footer footer footer ";
+}
+
+.logo {
+  grid-area: logo;
+  margin: auto;
+
+}
+
+main.book-index,
+main.book-single {
+  grid-area: main;
+  display: block;
+  height: calc(100vh - var(--navbar-height) - var(--footer-height));
+}
+
+.sidebar {
+  grid-area: sidebar;
+  overflow: auto;
+  height: 100%;
+  padding: 2em;
+  label {
+    display: block;
+    padding: 1em;
+  }
+}
+main {
+  grid-area: main; 
+  overflow: auto;
+  height: 100%;
+  padding: 2em;
+  padding: 2em;
+}
+
+/* ↓----------------- menu -------------↓ */
+
+.topbar {
+  grid-area: menu;
+  flex-direction: row-reverse;
+  background: var(--color-background, white);
+  padding: 0 5vh;
+  z-index: 10000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-interface);
+  text-transform: uppercase;
+  top: 0;
+  position: sticky;
+}
+
+.topbar nav {
+  width: 100%;
+  ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    justify-content: flex-end;
+
+    li {
+      line-height: 1;
+      margin: 0 1em;
+      a {
+        text-decoration: none;
+        border-bottom: 2px solid var(--color-accent, black);
+      }
+    }
+  }
+}
+
+/* .book-single .toc {
+  height: calc(100vh - var(--footer-height));
+  overflow-y: auto;
+} */
+
+/* hugo needs for highlight bug in chrome  */
+
+div.highlight {
+  max-width: 100%;
+}
+div.highlight pre {
+  white-space: pre-wrap;
+  /* word-break: break-word; */
+}
+
+/* book index ↓ */
+footer {
+  grid-area: footer;
+  background: var(--color-background, white);
+  display: flex;
+  align-content: center;
+  justify-content: flex-end;
+  a {
+    margin-right: 3em;
+  }
+}
+
+/* 
+.showToc {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+ */
+
+/* responsive and interaction for menus */
+
+/* button to toggle the menu 
+------------------------↓↓↓---------------------------*/
+[for="menuList"] {
+  padding: 0.4em 1.3ch;
+  background: white;
+}
+
+/* hide the checkbox, but use it to display stuff */
+.menu-check {
+  display: none;
+  & + nav {
+    display: none;
+  }
+  &:checked {
+    & + nav {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  /* topbar menu */
+  #menuTOC + nav {
+    display: block;
+  }
+  .topbar {
+    [for="menuList"] {
+      display: none;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    display: block;
+  }
+  #menuTOC + nav {
+    display: none;
+  }
+  #menuTOC:checked + nav {
+    display: block;
+    position: absolute;
+    /* bottom: 0; */
+    /* top: 15vh; */
+    background: yellow;
+    z-index: 40000;
+    overflow-y: auto;
+    width: 100%;
+  }
+  .sidebar {
+    grid-area: footer;
+    text-align: center;
+    height: auto;
+    position: unset;
+  }
+  footer {
+    display: none;
+  }
+  main.book-single,
+  main.book-index {
+    height: auto;
+  }
+  .sidebar .toc {
+    height: auto;
+  }
+  .sidebar {
+    label {
+      padding: 1em;
+    }
+  }
+  /* topbar menu */
+
+  .logo {
+    text-align: center;
+    font-size: 3em;
+  }
+
+  .topbar {
+    flex-direction: column;
+    nav {
+      flex-direction: row;
+      height: auto;
+      padding-bottom: 3em;
+
+      ul {
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        li {
+          padding: 1em;
+        }
+      }
+    }
+  }
+}
+
+
+/* pagedjs interface  */
+
+.pagedjs_pages {
+  flex-direction: column;
+  width: 100%;
+}
+
+.pagedjs_first_page {
+  margin-left: 0;
+}
+
+.pagedjs_page {
+  margin: 0 auto;
+  margin-top: 10mm;
+}
+
+
+/* pagedjs print  */
+@media print {
+  body {
+    display: block;
+  }
+
+  main {
+    overflow: unset;
+  }
+
+  .logo {
+    /* position: fixed; */
+  }
+
+  .topbar {
+    display: none;
+  }
+
+  main.book-index,
+  main.book-single {
+    height: auto;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  footer {
+    position: fixed;
+  }
+
+  .content {
+    display: auto;
+    height: unset;
+    padding: 0;
+    overflow: unset;
+  }
+}

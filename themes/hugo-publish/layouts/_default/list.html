@@ -1,0 +1,12 @@
+{{define "bodyClass" }}list{{end}}
+
+{{ define "main" }}
+<main>
+    {{ range .Pages }}
+    <article>
+        <h2>{{ .Title }}</h2>
+        {{ .Content }}
+    </article>
+    {{ end }}
+</main>
+{{ end }}

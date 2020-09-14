@@ -1,0 +1,53 @@
+{{define "bodyClass" }}book-single{{end}}
+
+{{ define "sidebar" }}
+
+
+{{ $currentPage := . }}
+<aside class="sidebar">
+    <label for="menuTOC">Table of Contents</label>
+    <input id="menuTOC" name="menuTOC" class="menu-check" type="checkbox"></input>
+    <nav class="toc">
+        <ul>
+            {{ range .Parent.RegularPages.ByParam "order" }}
+            <li>
+                <h3><a href="{{.Permalink | relURL }}"><span>{{.Title}}</span></a></h3>
+                {{ $link := printf "href=\"%s" .Permalink }}
+                {{ replace .Page.TableOfContents `nav id="TableOfContents"` `ul class="sub-toc"` | replaceRE `</nav>` `</ul>` | replaceRE `<ul>` `` | replaceRE `</ul>` `` | replaceRE `href="` $link | safeHTML }}
+                </li>
+            </ul>
+
+        {{ end }}
+    </ul>
+
+</aside>
+{{end}}
+
+
+{{ define "main" }}
+{{ $currentPage := . }}
+<main class="book-single">
+    <section class="content">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+    </section>
+</main>
+{{ end }}
+
+{{ define "footer" }}
+<!-- <footer>
+    {{ with .NextInSection }}
+    <a class="previous" href="{{.Permalink}}">{{.Title}}</a>
+    {{ end }}
+    <a href="#">you’re now reading: {{.Title}}</a>
+    {{ if .NextInSection }}
+    {{ with .PrevInSection }}
+    <a class="next" href="{{.Permalink}}">{{.Title}}</a>
+    {{ end }}
+    {{ else }}
+    {{ with .PrevInSection }}
+    <a class="next alone" href="{{.Permalink}}">{{.Title}}</a>
+    {{ end }}
+    {{ end }}
+</footer> -->
+{{ end }}
